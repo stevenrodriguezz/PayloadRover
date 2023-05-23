@@ -1,3 +1,5 @@
+#include "Adafruit_BME280.h"
+
 
 #define BME_SDA 18
 #define BME_SCL 19
@@ -5,8 +7,6 @@
 Adafruit_BME280 bme;
 
 void BME_START() {
-  Serial.begin(9600);
-  while(!Serial);
   Serial.println(F("BME280 test"));
   unsigned status;
   status = bme.begin();  
@@ -22,21 +22,29 @@ void BME_START() {
 }
 
 void BME_READ() {
+  Serial.println("1,BME,DATA," + String(bme.readTemperature()) +"," + String(bme.readPressure() / 100.0F)+"," + String(bme.readHumidity()) + ",1");
  
-  Serial.print("Temperature = ");
-  Serial.print(bme.readTemperature());
-  Serial.print(" °C, ");
+  
+  //Serial.print("Temperature = ");
+  //Serial.print(bme.readTemperature());
+  //Serial.print(",");
+  //Serial.println(" °C");
 
-  Serial.print("Pressure = ");
-  Serial.print(bme.readPressure() / 100.0F);
-  Serial.print(" hPa, ");
+  //Serial.print("Pressure = ");
+  //Serial.print(bme.readPressure() / 100.0F);
+  //Serial.print(",");
+  //Serial.println(" hPa");
 
-  Serial.print("Humidity = ");
-  Serial.print(bme.readHumidity());
-  Serial.println(" %");
+  //Serial.print("Humidity = ");
+  //Serial.print(bme.readHumidity());
+  //Serial.print(",1");
+  //Serial.println(" %");
 
-  delay(2000);
+  //Serial.println();
+  
 }
+
+
 
 
 
