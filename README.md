@@ -1,11 +1,5 @@
 # SEDS-PayloadRover2023
 
-#DISCLAIMER 
-
-This code is by no means finished and will still require some tweaks for it all to run smoothly as one unit. There is still code that is pending related to the Xbee Transmitter and Receiver modules that have not been added to this repository yet. 
-
-# PayloadRover2023
-
 Welcome! My name is Steven Rodriguez and I was the 2023 Software Lead for the Student Exploration for the Development of Space Club (SEDS) at FIU. This repository is showcasing the different code that was used in programming the 2023 Payload Rover and is to be used as a reference for future Payload Rover programming. 
 
 
