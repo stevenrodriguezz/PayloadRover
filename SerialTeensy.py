@@ -2,8 +2,8 @@ import serial
 import time
 import os
 
-teensyDataFolder = "/home/stevenchurro/Projects/Testloops/teensyData/"
-teensyErrorFolder = "/home/stevenchurro/Projects/Testloops/teensyError/"
+teensyDataFolder = "/home/seds/SEDS/SEDS-PayloadRover2023/teensyData/"
+teensyErrorFolder = "/home/seds/SEDS/SEDS-PayloadRover2023/teensyError/"
 
 # Replace the port and baudrate with the values used in your Teensy code
 ser = serial.Serial('/dev/ttyACM0', 9600)
