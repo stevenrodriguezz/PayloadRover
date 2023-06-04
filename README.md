@@ -25,6 +25,7 @@ This folder contains the final Python scripts called [SerialGPS.py](https://gith
 The cronjobs used on Crotab were the following:
 
 @reboot sleep 10 && /bin/python / home/ seds/SEDS/SEDS-PayloadRover2023/SerialGPS.py
+
 @reboot sleep 10 && /bin/python / home/ seds/SEDS/SEDS-PayloadRover2023/SerialTeensy.py
 
 
