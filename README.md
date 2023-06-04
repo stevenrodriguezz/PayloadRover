@@ -11,22 +11,16 @@ There are 3 folders listed in this repository.
 
 This folder contains the main arduino sketch file called teensyLoop.ino and the header files declared inside of it called BME.h , BNO.h , and payload_servos.h. The code in each header file is an edited version of the original code for the [BME 680](https://learn.adafruit.com/adafruit-bme680-humidity-temperature-barometic-pressure-voc-gas/arduino-wiring-test), [BNO 055](https://learn.adafruit.com/adafruit-bno055-absolute-orientation-sensor/arduino-code), and the [FITEC 360 servos](https://www.circuitbasics.com/controlling-servo-motors-with-arduino/#:~:text=For%20a%20servo%20motor%20capable%20of%20a%20range,90%20degrees%2C%20and%202000%20microseconds%20%3D%20180%20degrees.). 
 
-The code in the BME.h and BNO.h header files was formatted in a way in which the data collected from the sensors would be printed to the serial monitor in an easily parsable format similar to the NMEA string GPS format. 
+The code in the BME.h and BNO.h header files was formatted in a way in which the data collected from the sensors would be printed to the serial monitor in an easily parsable format similar to the [NMEA strings](https://navspark.mybigcommerce.com/content/NMEA_Format_v0.1.pdf) GPS format. 
 
 2.) Initial Python Scripts 
 
-This folder contains the original Python scripts called gpsLoop.py and teensyLoop.py. The purpose of each one was to create a way for a Linux computer to communicate via I2C and UART with the Teensy's sensors and the GPS respectively. 
+This folder contains the original Python scripts called gpsLoop.py and teensyLoop.py. The purpose of each one was to create a way for a Linux computer to communicate via I2C and UART with the Teensy's sensors and the GPS respectively. These scripts are what can be considered initial first drafts of code which were tweaked and adjusted over time based on time constraints and desired outcomes. 
 
 
-3.) ADXL.h 
+3.) Final Raspberry Pi Scripts 
 
-This is the same ADXL 345 code that can be found on [Github](https://github.com/adafruit/Adafruit_Sensor) or installed on the Arduino IDE except that the void Setup and void loop functions were changed to void ADXL_READ and void ADXL_START respectively. These newly named functions were declared in the main file called Integrated_Payload.ino. The entire code found in this file was named ADXL.h and included as a library in the main file called Integrated_Payload.ino. 
+This folder contains the final Python scripts called SerialGPS.py and SerialTeensy.py that were imported onto a Raspberry Pi 4b using the 'git clone' command in a directory called SEDS. These scripts imported serial data from the Teensy's sensors and the GPS module and appended this data  to two separate files. These two scripts were automated with the help of Crontab and allowed the scripts to be executed as soon as the Raspberry Pi was turned back on.
 
-4.) gps_split.py
 
-This Python code was used to parse the [NMEA strings](https://navspark.mybigcommerce.com/content/NMEA_Format_v0.1.pdf) outputted by the GT U7 GPS module. In this code the NMEA string of interest was the GNGGA string which included data on latitude, longitude, altitude, and number of satellites detected, however, our data of interest was reduced to latitude,longitude, and altitude to preserve computer memory. 
-
-5.) servo_rotating.ino 
-
-This code uses the object class "pwm" and the arduino built in function "writeMicroseconds()" to move two [FITEC servos](https://www.pololu.com/file/0J1433/FS5106R-specs.pdf) continuously. 
 
