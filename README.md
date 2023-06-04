@@ -15,7 +15,7 @@ The code in the BME.h and BNO.h header files was formatted in a way in which the
 
 # 2.) Initial Python Scripts 
 
-This folder contains the original Python scripts called gpsLoop.py and teensyLoop.py. The purpose of each one was to create a way for a Linux computer to communicate via I2C and UART with the Teensy's sensors and the GPS respectively. These scripts are what can be considered initial first drafts of code which were tweaked and adjusted over time based on time constraints and desired outcomes. 
+This folder contains the original Python scripts called [gpsLoop.py](https://github.com/stevenrodriguezz/SEDS-PayloadRover2023/blob/main/Initial%20Test%20Python%20Scripts%20/gpsLoop.py) and [teensyLoop.py](https://github.com/stevenrodriguezz/SEDS-PayloadRover2023/blob/main/Initial%20Test%20Python%20Scripts%20/teensyLoop.py). The purpose of each one was to create a way for a Linux computer to communicate via I2C and UART with the Teensy's sensors and the GPS respectively. These scripts are what can be considered initial first drafts of code which were tweaked and adjusted over time based on time constraints and desired outcomes. 
 
 
 # 3.) Final Raspberry Pi Scripts 
