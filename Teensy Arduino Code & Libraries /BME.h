@@ -23,24 +23,6 @@ void BME_START() {
 
 void BME_READ() {
   Serial.println("1,BME,DATA," + String(bme.readTemperature()) +"," + String(bme.readPressure() / 100.0F)+"," + String(bme.readHumidity()) + ",1");
- 
-  
-  //Serial.print("Temperature = ");
-  //Serial.print(bme.readTemperature());
-  //Serial.print(",");
-  //Serial.println(" °C");
-
-  //Serial.print("Pressure = ");
-  //Serial.print(bme.readPressure() / 100.0F);
-  //Serial.print(",");
-  //Serial.println(" hPa");
-
-  //Serial.print("Humidity = ");
-  //Serial.print(bme.readHumidity());
-  //Serial.print(",1");
-  //Serial.println(" %");
-
-  //Serial.println();
   
 }
 
