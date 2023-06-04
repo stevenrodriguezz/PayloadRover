@@ -20,7 +20,7 @@ This folder contains the original Python scripts called [gpsLoop.py](https://git
 
 # 3.) Final Raspberry Pi Scripts 
 
-This folder contains the final Python scripts called SerialGPS.py and SerialTeensy.py that were imported onto a Raspberry Pi 4b using the 'git clone' command in a directory called SEDS. These scripts imported serial data from the Teensy's sensors and the GPS module and appended this data  to two separate files. These two scripts were automated with the help of Crontab and allowed the scripts to be executed as soon as the Raspberry Pi was turned back on.
+This folder contains the final Python scripts called [SerialGPS.py](https://github.com/stevenrodriguezz/SEDS-PayloadRover2023/blob/main/Final%20Raspberry%20Pi%20Python%20Scripts%20/SerialGPS.py) and [SerialTeensy.py](https://github.com/stevenrodriguezz/SEDS-PayloadRover2023/blob/main/Final%20Raspberry%20Pi%20Python%20Scripts%20/SerialTeensy.py) that were imported onto a Raspberry Pi 4b using the 'git clone' command in a directory called SEDS. These scripts imported serial data from the Teensy's sensors and the GPS module and appended this data  to two separate files. These two scripts were automated with the help of Crontab and allowed the scripts to be executed as soon as the Raspberry Pi was turned back on.
 
 
 
