@@ -11,11 +11,11 @@ There are 3 folders listed in this repository.
 
 This folder contains the main arduino sketch file called teensyLoop.ino and the header files declared inside of it called BME.h , BNO.h , and payload_servos.h. The code in each header file is an edited version of the original code for the [BME 680](https://learn.adafruit.com/adafruit-bme680-humidity-temperature-barometic-pressure-voc-gas/arduino-wiring-test), [BNO 055](https://learn.adafruit.com/adafruit-bno055-absolute-orientation-sensor/arduino-code), and the [FITEC 360 servos](https://www.circuitbasics.com/controlling-servo-motors-with-arduino/#:~:text=For%20a%20servo%20motor%20capable%20of%20a%20range,90%20degrees%2C%20and%202000%20microseconds%20%3D%20180%20degrees.). 
 
-The code in the BME.h and BNO.h header files was formatted in a way in which the data collected from the sensors would be printed to the serial monitor in an easily parsable format similar to the NMEA string GPS format.  
+The code in the BME.h and BNO.h header files was formatted in a way in which the data collected from the sensors would be printed to the serial monitor in an easily parsable format similar to the NMEA string GPS format. 
 
-2.) BME.h 
+2.) Initial Python Scripts 
 
-This is same BME 688 code that can be found on [GitHub](https://github.com/adafruit/Adafruit_BME680) or installed on the Arduino IDE except that the void Setup and void loop functions were changed to void BME_READ and void BME_START respectively. These newly named functions were declared in the main file called Integrated_Payload.ino. The entire code found in this file was named BME.h and included as a library in the main file called Integrated_Payload.ino. 
+Two python scripts were created to 
 
 
 3.) ADXL.h 
