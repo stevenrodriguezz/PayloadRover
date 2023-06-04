@@ -5,9 +5,11 @@ Welcome! My name is Steven Rodriguez and I was the 2023 Software Lead for the St
 
 # How it Works 
 
-There are 5 files listed in this repository. 
+There are 3 folders listed in this repository. 
 
-1.) Integrated_Payload.ino 
+1.) Teensy Arduino Code & Libraries 
+
+This folder contains the main arduino sketch file called teensyLoop.ino and the header files declared inside of it called BME.h , BNO.h , and payload_servos.h. The code in each header file is an edited version of the original code for the [BME 680](https://learn.adafruit.com/adafruit-bme680-humidity-temperature-barometic-pressure-voc-gas/arduino-wiring-test), [BNO 055](https://learn.adafruit.com/adafruit-bno055-absolute-orientation-sensor/arduino-code), and the [FITEC 360 servos](https://www.circuitbasics.com/controlling-servo-motors-with-arduino/#:~:text=For%20a%20servo%20motor%20capable%20of%20a%20range,90%20degrees%2C%20and%202000%20microseconds%20%3D%20180%20degrees.). 
 
 This is the main file which includes Adafruit libraries and code used for the [BME 688 Temperature, Pressure, Humidity sensor](https://learn.adafruit.com/adafruit-bme680-humidity-temperature-barometic-pressure-voc-gas/arduino-wiring-test) & the [ADXL 345 accelorometer](https://learn.adafruit.com/adxl345-digital-accelerometer/programming). The ADXL 345 requires two library installation as specified on the ADAfruit website. 
 
