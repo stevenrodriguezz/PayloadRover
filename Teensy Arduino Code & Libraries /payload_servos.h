@@ -18,6 +18,4 @@ void SERVO_READ() {
   servo1.writeMicroseconds(700);
   servo2.writeMicroseconds(2300);
 
-  // put your main code here, to run repeatedly:
-
 }
