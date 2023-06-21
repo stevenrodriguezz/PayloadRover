@@ -20,9 +20,12 @@ void setup() {
 }
 
 void loop() {
+// Two static variables are delcared and initialized to zero to keep track of th last time the BNO and BME sensors were read. 
   static unsigned long BNOTime = 0;
   static unsigned long BMETime = 0;
-  //static unsigned long GPSTime = 0;
+
+// Both conditional statements call the BNO_READ() and BME_READ() functions if their current times obtained using millis() are greater than zero.
+// Both functioned that are called are derived from the BNO.h and BME.h header files and start reading their corrresponding sensors data when called. 
   if (millis()>BNOTime){
     BNO_READ();
     BNOTime = millis() + BNO055_SAMPLERATE_DELAY_MS;
