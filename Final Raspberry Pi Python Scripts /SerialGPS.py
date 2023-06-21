@@ -8,7 +8,7 @@ GPSDataFolder = "/home/seds/SEDS/SEDS-PayloadRover2023/gpsData/"
 # Initialize variable as a Serial object to allow communication with GPS via USB located at either '/dev/ttyACM0' or  '/dev/ttyACM1' 
 ser = serial.Serial('/dev/ttyACM0', 9600) 
 
-#This line creates a variable where the 'GPSDataFolder' path concatenates with the string 'GPS-' , the current time converted to an integer, amd a '.txt' file extension. 
+#This line creates a variable where the 'GPSDataFolder' path concatenates with the string 'GPS-' , the current time converted to an integer, and a '.txt' file extension. 
 gpsDataFilename = GPSDataFolder + "GPS-" + str(int(time.time())) + ".txt"
 
 #Initiate an infinite loop that will run the code inside the loop continously until power on the rapsberry pi is disabled. 
