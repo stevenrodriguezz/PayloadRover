@@ -25,7 +25,7 @@ void loop() {
   static unsigned long BMETime = 0;
 
 // Both conditional statements call the BNO_READ() and BME_READ() functions if their current times obtained using millis() are greater than zero.
-// Both functioned that are called are derived from the BNO.h and BME.h header files and start reading their corrresponding sensors data when called. 
+// Both functioned that are called are derived from the BNO.h and BME.h header files and start reading their corrresponding sensors data when called, update to their current time plus the delay period. 
   if (millis()>BNOTime){
     BNO_READ();
     BNOTime = millis() + BNO055_SAMPLERATE_DELAY_MS;
@@ -36,4 +36,4 @@ void loop() {
     BMETime = millis() + BME280_SAMPLERATE_DELAY_MS;
   }
   
-  SERVO_READ();
+  SERVO_READ(); //This function is called in every iteration of the loop from the payload_servo.h file. 
