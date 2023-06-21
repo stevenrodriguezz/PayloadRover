@@ -3,32 +3,20 @@
 #include <Adafruit_BNO055.h>
 #include <utility/imumaths.h>
 
-//#define BNO055_SAMPLERATE_DELAY_MS (2000)
-
-// Check I2C device address and correct line below (by default address is 0x29 or 0x28)
-//                                   id, address
 Adafruit_BNO055 bno = Adafruit_BNO055(-1, 0x28, &Wire);
 
-/**************************************************************************/
-/*
-    Arduino setup function (automatically called at startup)
-*/
-/**************************************************************************/
 void BNO_START(void)
 {
   Serial.println("Orientation Sensor Raw Data Test"); Serial.println("");
 
-  /* Initialise the sensor */
   if(!bno.begin())
   {
-    /* There was a problem detecting the BNO055 ... check your connections */
     Serial.print("Ooops, no BNO055 detected ... Check your wiring or I2C ADDR!");
 
   }
 
   delay(1000);
 
-  /* Display the current temperature */
   int8_t temp = bno.getTemp();
   Serial.print("Current Temperature: ");
   Serial.print(temp);
@@ -40,14 +28,8 @@ void BNO_START(void)
   Serial.println("Calibration status values: 0=uncalibrated, 3=fully calibrated");
 }
 
-/**************************************************************************/
-/*
-    Arduino loop function, called once 'setup' is complete (your own code
-    should go here)
-*/
-/**************************************************************************/
 void printEvent(sensors_event_t* event) {
-  double x = -1000000, y = -1000000 , z = -1000000; //dumb values, easy to spot problem
+  double x = -1000000, y = -1000000 , z = -1000000; 
   String BNOdataType = "";
   if (event->type == SENSOR_TYPE_ACCELEROMETER) {
     BNOdataType = "Accl";
@@ -100,7 +82,6 @@ void printEvent(sensors_event_t* event) {
 
 void BNO_READ(void)
 {
-  //could add VECTOR_ACCELEROMETER, VECTOR_MAGNETOMETER,VECTOR_GRAVITY...
   sensors_event_t orientationData , angVelocityData , linearAccelData, magnetometerData, accelerometerData, gravityData;
   bno.getEvent(&orientationData, Adafruit_BNO055::VECTOR_EULER);
   bno.getEvent(&angVelocityData, Adafruit_BNO055::VECTOR_GYROSCOPE);
