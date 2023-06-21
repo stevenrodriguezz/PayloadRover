@@ -16,7 +16,7 @@ while True:
     if ser.in_waiting > 0:  #Checks if there is data to be read, if there is then the code inside the 'if' block will execute.
         gpsRAW = ser.read_all().decode("utf-8") # Reads all available data from the serial connection and assigns it to a variable called gpsRAW. 
         with open(gpsDataFilename, "a") as f: #This block opens previosuly specified 'gpsDataFilename' in append mode and assigns it to the file object 'f'.
-                    f.write("Time:" + str(time.time()) + "\r\n" + gpsRAW) # It writes a string to the file, the current time, a line break, and the received GPS data. 
+                    f.write("Time:" + str(time.time()) + "\r\n" + gpsRAW) # Writes a string to the file, the current time, a line break, and the received GPS data. 
                     
     time.sleep(1) #Pauses the execution of the code for 1 second allowing for a delay between iterations. 
 
