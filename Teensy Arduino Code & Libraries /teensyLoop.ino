@@ -4,7 +4,6 @@
 #include "BME.h"
 #include "BNO.h"
 #include "payload_servos.h"
-#include "gps.h"
 
 //Constants representing delay period between sensor readings in milliseconds.
 #define BNO055_SAMPLERATE_DELAY_MS 2000
