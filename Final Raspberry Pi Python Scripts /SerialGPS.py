@@ -1,6 +1,5 @@
 import serial
 import time
-import os
 
 # Assign string value representing path to gpsData folder to a variable called GPSDataFolder 
 GPSDataFolder = "/home/seds/SEDS/SEDS-PayloadRover2023/gpsData/"
