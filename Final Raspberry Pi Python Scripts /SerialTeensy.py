@@ -1,6 +1,5 @@
 import serial
 import time
-import os
 
 # Assign string value representing path to teh Teensy Data Folder and the Teensy Error Folder to variables called teensyDataFolder and teensyErrorFolder.  
 teensyDataFolder = "/home/seds/SEDS/SEDS-PayloadRover2023/teensyData/"
