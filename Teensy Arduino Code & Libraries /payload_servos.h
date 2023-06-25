@@ -1,6 +1,6 @@
 #include <Servo.h>
 
-#define servoPin1 9
+#define servoPin1 9 // Assign signal pins of each servo
 #define servoPin2 10
 
 Servo servo1;
