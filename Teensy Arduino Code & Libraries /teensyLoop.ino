@@ -19,7 +19,7 @@ void setup() {
 }
 
 void loop() {
-// Two static variables are delcared and initialized to zero to keep track of th last time the BNO and BME sensors were read. 
+// Two static variables are declared and initialized to zero to keep track of the last time the BNO and BME sensors were read. 
   static unsigned long BNOTime = 0;
   static unsigned long BMETime = 0;
 
